@@ -11,16 +11,19 @@ class CountUI extends Component {
   }
   render() {
     return (
-      <div>
-        <Header title="react-redux"/>
+      <>
+        <Header title="react-redux" />
+        <article>
         <h1>总和{this.props.count}</h1>
         <button onClick={this.increment}>+</button>
         <button onClick={this.incrementAsync}>异步+</button>
-      </div>
+        </article>
+        
+      </>
     )
   }
 }
-export default connect(state=> ({...state}), {
+export default connect(state => ({ ...state }), {
   increment,
   incrementAsync
 })(CountUI)

@@ -11,20 +11,20 @@ const routers = [
   {
     path: '/login',
     component: lazy(() => import('../pages/User/Login')),
-    // children: [
-    //     {
-    //       path: '/demo',
-    //       component: lazy(() => import('../pages/User/Demo')),
-    //     },
-    //     {
-    //       path: '/demo2',
-    //       component: lazy(() => import('../pages/User/Demo2')),
-    //     },
-    //     {
-    //       path: '/',
-    //       redirect: '/demo'
-    //     }
-    // ]
+    children: [
+      {
+        path: '',
+        component: lazy(() => import('../pages/User/Demo')),
+      },
+        {
+          path: '/demo',
+          component: lazy(() => import('../pages/User/Demo')),
+        },
+        {
+          path: '/demo2',
+          component: lazy(() => import('../pages/User/Demo2')),
+        },
+    ]
   },
   {
     path: '/register',

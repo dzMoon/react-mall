@@ -9,6 +9,9 @@ class Header extends Component {
   customer = () => {
     this.props.history.push('/customer')
   }
+  componentDidMount(){
+    document.title = this.props.title?this.props.title:"晋金财富欢迎你"
+  }
   render() {
     return (
       <Fragment>
